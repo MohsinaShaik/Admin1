@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCRUD(ADO.NET)", "WebApiCRUD(ADO.NET)\WebApiCRUD(ADO.NET).csproj", "{0512328E-D3A2-4020-9EEF-C72FB89D18EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0512328E-D3A2-4020-9EEF-C72FB89D18EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0512328E-D3A2-4020-9EEF-C72FB89D18EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0512328E-D3A2-4020-9EEF-C72FB89D18EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0512328E-D3A2-4020-9EEF-C72FB89D18EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41A7C341-E483-4107-9966-0194B7AEC81D}
+	EndGlobalSection
+EndGlobal
