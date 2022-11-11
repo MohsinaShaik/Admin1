@@ -61,19 +61,20 @@ namespace WebApiCRUD_ADO.NET_.Controllers
                 List<Class1> obj = new List<Class1>();
                 string cs = "data source=DESKTOP-USHDUOR;database=webapi_crud_db;integrated security=true";
                 SqlConnection con = new SqlConnection(cs);
-                
-                    //string qry = "INSERT INTO Employee VALUES('"+employee.Name+"','"+employee.Gender+"',"+employee.Age+",'"+employee.Designation+"')";
-                    
-                    SqlCommand com = new SqlCommand("PostData", con);
+
+                    SqlCommand com = new SqlCommand("Saveemployee", con);
                     com.CommandType = CommandType.StoredProcedure;
                     con.Open();
-                        com.Parameters.AddWithValue("@name", employee.Name);
+
+                com.Parameters.AddWithValue("@name", employee.Name);
                         com.Parameters.AddWithValue("@gender", employee.Gender);
                         com.Parameters.AddWithValue("@age", employee.Age);
-                com.Parameters.AddWithValue("@designation", employee.Designation);         
-                //com.Parameters.Add("@id");
+                com.Parameters.AddWithValue("@designation", employee.Designation);
+                com.Parameters.AddWithValue("@id", SqlDbType.Int).Direction=ParameterDirection.Output ;
+
                 int a = com.ExecuteNonQuery();
-                com.Parameters.AddWithValue("id", employee.Id);
+                string getid = com.Parameters["@id"].Value.ToString();
+                employee.Id = Convert.ToInt32(getid);
                 if (a!= 0)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, employee);
